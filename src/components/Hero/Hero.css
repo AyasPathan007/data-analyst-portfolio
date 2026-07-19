@@ -1,0 +1,397 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 10%;
+  overflow: hidden;
+  position: relative;
+
+  background:
+    radial-gradient(circle at top right, #1e3a8a 0%, transparent 35%),
+    linear-gradient(135deg, #020617 0%, #0f172a 60%, #172554 100%);
+}
+
+/* Glow */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  background: #2563eb;
+  filter: blur(180px);
+  top: -180px;
+  right: -150px;
+  opacity: .30;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: #06b6d4;
+  filter: blur(160px);
+  bottom: -140px;
+  left: -120px;
+  opacity: .20;
+}
+
+.hero-content{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:80px;
+  position:relative;
+  z-index:2;
+}
+
+.hero-left{
+  flex:1;
+}
+
+.hero-greeting{
+  color:#cbd5e1;
+  font-size:1.1rem;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:4.8rem;
+  line-height:1.1;
+  color:white;
+  margin-bottom:15px;
+  font-weight:800;
+}
+
+.hero h1 span{
+  color:#38bdf8;
+}
+
+.hero h2{
+  color:#3b82f6;
+  font-size:2.2rem;
+  margin-bottom:25px;
+}
+
+.hero-description{
+  max-width:620px;
+  color:#cbd5e1;
+  line-height:1.9;
+  font-size:1.1rem;
+}
+
+.hero-description span{
+  color:#38bdf8;
+  font-weight:700;
+}
+
+.hero-buttons{
+  display:flex;
+  gap:20px;
+  margin-top:40px;
+}
+
+.hero-buttons a{
+  text-decoration:none;
+}
+
+.primary-btn,
+.secondary-btn{
+
+  display:flex;
+  align-items:center;
+  gap:10px;
+
+  padding:15px 28px;
+
+  border-radius:12px;
+
+  font-weight:600;
+
+  transition:.35s;
+}
+
+.primary-btn{
+
+  background:#2563eb;
+  color:white;
+}
+
+.primary-btn:hover{
+
+  transform:translateY(-4px);
+
+  box-shadow:0 12px 25px rgba(37,99,235,.45);
+
+}
+
+.secondary-btn{
+
+  border:2px solid #2563eb;
+
+  color:white;
+
+}
+
+.secondary-btn:hover{
+
+  background:#2563eb;
+
+}
+
+.hero-socials{
+
+  display:flex;
+
+  gap:25px;
+
+  margin-top:45px;
+
+}
+
+.hero-socials a{
+
+  color:white;
+
+  font-size:1.9rem;
+
+  transition:.3s;
+
+}
+
+.hero-socials a:hover{
+
+  color:#38bdf8;
+
+  transform:translateY(-5px);
+
+}
+
+/* IMAGE */
+
+.hero-image{
+
+  flex:1;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  position:relative;
+
+}
+
+.profile-circle{
+
+  width:380px;
+
+  height:380px;
+
+  border-radius:50%;
+
+  overflow:hidden;
+
+  border:5px solid #3b82f6;
+
+  box-shadow:0 0 45px rgba(59,130,246,.4);
+
+  animation:float 5s ease-in-out infinite;
+
+}
+
+.profile-circle img{
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+
+}
+
+/* Floating badges */
+
+.floating{
+
+  position:absolute;
+
+  background:rgba(15,23,42,.9);
+
+  color:white;
+
+  padding:12px 22px;
+
+  border-radius:30px;
+
+  border:1px solid rgba(59,130,246,.35);
+
+  backdrop-filter:blur(10px);
+
+  font-weight:600;
+
+  animation:float 4s ease-in-out infinite;
+
+}
+
+.one{
+
+  top:5%;
+
+  left:-20px;
+
+}
+
+.two{
+
+  top:28%;
+
+  right:-50px;
+
+  animation-delay:1s;
+
+}
+
+.three{
+
+  bottom:22%;
+
+  left:-30px;
+
+  animation-delay:2s;
+
+}
+
+.four{
+
+  bottom:5%;
+
+  right:-20px;
+
+  animation-delay:3s;
+
+}
+
+@keyframes float{
+
+  0%,100%{
+
+    transform:translateY(0);
+
+  }
+
+  50%{
+
+    transform:translateY(-12px);
+
+  }
+
+}
+
+/* Responsive */
+
+@media(max-width:1000px){
+
+.hero-content{
+
+flex-direction:column-reverse;
+
+text-align:center;
+
+gap:60px;
+
+}
+
+.hero-description{
+
+margin:auto;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+}
+
+.hero-socials{
+
+justify-content:center;
+
+}
+
+.profile-circle{
+
+width:300px;
+
+height:300px;
+
+}
+
+.floating{
+
+display:none;
+
+}
+
+.hero h1{
+
+font-size:3.5rem;
+
+}
+
+.hero h2{
+
+font-size:1.8rem;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.hero{
+
+padding:120px 7% 80px;
+
+}
+
+.hero h1{
+
+font-size:2.8rem;
+
+}
+
+.hero h2{
+
+font-size:1.5rem;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.hero-buttons a{
+
+justify-content:center;
+
+}
+
+.profile-circle{
+
+width:250px;
+
+height:250px;
+
+}
+
+}

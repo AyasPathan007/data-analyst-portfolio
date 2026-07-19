@@ -1,0 +1,230 @@
+.projects {
+  padding: 100px 10%;
+  background: #020617;
+  color: #fff;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+  font-weight: 700;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 40px;
+}
+
+/* =======================
+      PROJECT CARD
+======================= */
+
+.project-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 22px;
+  padding: 28px;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(12px);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: #3b82f6;
+  box-shadow: 0 25px 50px rgba(37, 99, 235, 0.25);
+}
+
+/* =======================
+      DASHBOARD IMAGE
+======================= */
+
+.project-image {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 25px;
+  background: #fff;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform .5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.03);
+}
+
+/* =======================
+      TITLES
+======================= */
+
+.project-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  color: white;
+}
+
+/* =======================
+      CONTENT
+======================= */
+
+.project-section {
+  margin-bottom: 22px;
+}
+
+.project-section h4 {
+  color: #38bdf8;
+  margin-bottom: 8px;
+  font-size: 1.05rem;
+}
+
+.project-section p {
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+
+/* =======================
+      TECH STACK
+======================= */
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.tech-stack span {
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: .85rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* Power BI */
+.tech-stack span:nth-child(1) {
+  background: #f2c811;
+  color: #111827;
+}
+
+/* SQL */
+.tech-stack span:nth-child(2) {
+  background: #2563eb;
+}
+
+/* DAX */
+.tech-stack span:nth-child(3) {
+  background: #8b5cf6;
+}
+
+/* Python / Power Query */
+.tech-stack span:nth-child(4) {
+  background: #16a34a;
+}
+
+/* Extra badges */
+.tech-stack span:nth-child(n+5) {
+  background: #334155;
+}
+
+/* =======================
+      BUTTONS
+======================= */
+
+.project-buttons {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.project-buttons button {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: .95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+}
+
+/* GitHub */
+
+.project-buttons button:first-child {
+  background: #1e293b;
+  color: white;
+}
+
+.project-buttons button:first-child:hover {
+  background: #334155;
+}
+
+/* View Dashboard */
+
+.project-buttons button:last-child {
+  background: #2563eb;
+  color: white;
+}
+
+.project-buttons button:last-child:hover {
+  background: #1d4ed8;
+}
+
+.project-buttons button:hover {
+  transform: translateY(-3px);
+}
+
+/* =======================
+      RESPONSIVE
+======================= */
+
+@media (max-width:900px) {
+
+  .projects {
+    padding: 80px 6%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+@media (max-width:600px) {
+
+  .projects h2 {
+    font-size: 2.2rem;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-buttons {
+    flex-direction: column;
+  }
+
+  .tech-stack {
+    gap: 8px;
+  }
+
+}
