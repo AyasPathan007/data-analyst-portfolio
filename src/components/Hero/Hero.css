@@ -354,11 +354,11 @@ font-size:1.8rem;
 
 }
 
-@media(max-width:600px){
+@media(max-width:768px){
 
 .hero{
 
-padding:120px 7% 80px;
+padding:110px 7% 70px;
 
 }
 
