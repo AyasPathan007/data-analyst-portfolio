@@ -1,54 +1,68 @@
 import "./Projects.css";
 import projects from "../../data/projects";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub, FaCheckCircle } from "react-icons/fa";
 
 function Projects() {
   return (
-<section
-  id="projects"
-  className="projects"
-  data-aos="fade-up"
->
-          <h2>Featured Projects</h2>
+    <section id="projects" className="projects" data-aos="fade-up">
+      <div className="projects-header">
+        <h2>Featured Projects</h2>
+
+        <p>
+          A collection of Business Intelligence, Data Analytics and AI-driven
+          solutions built using Power BI, SQL, Python and modern analytics
+          technologies.
+        </p>
+      </div>
 
       <div className="projects-grid">
-        {projects.map((project, index) => (
-          <div className="project-card" key={index}>
+        {projects.map((project) => (
+          <div className="project-card" key={project.id}>
             <div className="project-image">
-  <img src={project.image} alt={project.title} />
-</div>
-
-            <h3>{project.title}</h3>
-
-            <div className="project-section">
-              <h4>📌 Business Problem</h4>
-              <p>{project.problem}</p>
+              <img src={project.image} alt={project.title} />
             </div>
 
-            <div className="project-section">
-              <h4>💡 Solution</h4>
-              <p>{project.solution}</p>
-            </div>
+            <div className="project-content">
+              <span className="project-category">
+                {project.category}
+              </span>
 
-            <div className="project-section">
-              <h4>📈 Business Impact</h4>
-              <p>{project.impact}</p>
-            </div>
+              <h3>{project.title}</h3>
 
-            <div className="tech-stack">
-              {project.tech.map((tech, i) => (
-                <span key={i}>{tech}</span>
-              ))}
-            </div>
+              <p className="project-description">
+                {project.description}
+              </p>
 
-            <div className="project-buttons">
-              <button>
-                <FaGithub /> GitHub
-              </button>
+              <div className="highlights">
+                <h4>Key Highlights</h4>
 
-              <button>
-                <FaExternalLinkAlt /> Case Study
-              </button>
+                <ul>
+                  {project.highlights.map((item, index) => (
+                    <li key={index}>
+                      <FaCheckCircle className="check-icon" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="tech-stack">
+                {project.technologies.map((tech, index) => (
+                  <span key={index}>{tech}</span>
+                ))}
+              </div>
+
+              <div className="project-footer">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="github-btn"
+                >
+                  <FaGithub />
+                  View Source Code
+                </a>
+              </div>
             </div>
           </div>
         ))}

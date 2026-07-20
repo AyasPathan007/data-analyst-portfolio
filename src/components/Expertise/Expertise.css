@@ -1,0 +1,65 @@
+.expertise {
+  padding: 90px 10%;
+  background: #020617;
+}
+
+.expertise h2 {
+  text-align: center;
+  color: white;
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+}
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.expertise-card {
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  border-radius: 20px;
+  padding: 35px;
+  transition: 0.35s;
+  text-align: center;
+}
+
+.expertise-card:hover {
+  transform: translateY(-8px);
+  border-color: #3b82f6;
+  box-shadow: 0 20px 45px rgba(37, 99, 235, 0.25);
+}
+
+.icon {
+  font-size: 3rem;
+  color: #38bdf8;
+  margin-bottom: 20px;
+}
+
+.expertise-card h3 {
+  color: white;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.expertise-card p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .expertise {
+    padding: 70px 7%;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+  }
+}

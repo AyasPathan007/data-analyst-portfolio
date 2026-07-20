@@ -4,6 +4,7 @@ import {
   FaLinkedin,
   FaEnvelope,
   FaFileDownload,
+  FaPhoneAlt
 } from "react-icons/fa";
 
 function Contact() {
@@ -25,7 +26,10 @@ function Contact() {
           <FaEnvelope />
           Email
         </a>
-
+        <a href="tel:+91 7410199069">
+    <FaPhoneAlt />
+    +91 7410199069
+  </a>
         <a
           href="https://www.linkedin.com/in/ayas-pathan-770268414/"
           target="_blank"

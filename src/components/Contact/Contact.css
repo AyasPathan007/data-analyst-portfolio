@@ -52,3 +52,19 @@
 .contact-links svg {
   font-size: 1.3rem;
 }
+.hero-contact{
+  margin-top:20px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#cbd5e1;
+}
+
+.hero-contact a{
+  color:#cbd5e1;
+  text-decoration:none;
+}
+
+.hero-contact a:hover{
+  color:#38bdf8;
+}

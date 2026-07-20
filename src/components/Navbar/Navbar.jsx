@@ -1,24 +1,38 @@
+import { useState, useEffect } from "react";
 import "./Navbar.css";
 import { Link } from "react-scroll";
 
 function Navbar() {
-  return (
-    <header className="navbar">
+  const [showNavbar, setShowNavbar] = useState(true);
 
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        setShowNavbar(false); // Hide on scroll down
+      } else {
+        setShowNavbar(true); // Show on scroll up
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <header className={`navbar ${showNavbar ? "show" : "hide"}`}>
       <div className="logo">
         Ayas<span>.</span>
       </div>
 
       <nav>
-
-        <Link
-          to="home"
-          smooth={true}
-          duration={500}
-          spy={true}
-          offset={-80}
-          activeClass="active"
-        >
+        <Link to="home" smooth duration={500} spy offset={-80} activeClass="active">
           Home
         </Link>
 
@@ -41,9 +55,7 @@ function Navbar() {
         <Link to="contact" smooth duration={500} spy offset={-80} activeClass="active">
           Contact
         </Link>
-
       </nav>
-
     </header>
   );
 }
