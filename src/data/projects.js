@@ -24,7 +24,7 @@ const projects = [
       "Excel"
     ],
 
-    github: "https://github.com/AyasPathan007/hr-analytics-dashboard"
+    github: "https://github.com/AyasPathan007/hr-analytics-dashboard",
   },
 
   {
