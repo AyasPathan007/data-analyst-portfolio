@@ -90,12 +90,6 @@ function Hero() {
               alt="Ayas Pathan"
             />
           </div>
-
-          <div className="floating one">Power BI</div>
-          <div className="floating two">SQL</div>
-          <div className="floating three">Python</div>
-          <div className="floating four">Excel</div>
-
         </div>
 
       </div>

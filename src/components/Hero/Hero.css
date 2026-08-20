@@ -214,30 +214,6 @@
 
 }
 
-/* Floating badges */
-
-.floating{
-
-  position:absolute;
-
-  background:rgba(15,23,42,.9);
-
-  color:white;
-
-  padding:12px 22px;
-
-  border-radius:30px;
-
-  border:1px solid rgba(59,130,246,.35);
-
-  backdrop-filter:blur(10px);
-
-  font-weight:600;
-
-  animation:float 4s ease-in-out infinite;
-
-}
-
 .one{
 
   top:5%;
