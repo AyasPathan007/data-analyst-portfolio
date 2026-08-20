@@ -35,8 +35,6 @@ const experiences = [
       "Performed admission funnel analysis across 5 stages, from initial parent enquiry to final enrolment, identifying conversion patterns and drop-off points.",
       "Cleaned, transformed, and consolidated data from 10+ Excel files and administrative records to create structured datasets for reporting and analysis.",
       "Monitored attendance and academic performance data for 500+ students across multiple classes, identifying trends and supporting regular management reporting.",
-      "Analyzed enquiry sources, class-wise demand, and conversion rates to support admission planning and parent outreach activities.",
-      "Automated recurring reporting through Power BI dashboards and reusable data models, reducing manual effort in report preparation.",
       "Collaborated with admissions staff, teachers, and school management to gather reporting requirements and deliver monthly and admission-cycle reports.",
     ],
 
