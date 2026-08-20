@@ -83,14 +83,10 @@ function Hero() {
         {/* RIGHT SIDE */}
 
         <div className="hero-image">
-
-          <div className="profile-circle">
-            <img
-              src={profile}
-              alt="Ayas Pathan"
-            />
-          </div>
-        </div>
+  <div className="profile-circle">
+    <img src={profile} alt="Ayas Pathan" />
+  </div>
+</div>
 
       </div>
     </section>
