@@ -1,7 +1,7 @@
 const experiences = [
   {
     year: "2023 - 2026",
-    role: "Power BI Developer",
+    role: "Data Analyst",
     company: "Tata Consultancy Services",
     domain: "Digital Commerce Domain",
 
